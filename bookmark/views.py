@@ -14,9 +14,7 @@ from django.contrib.auth.models import User
 def index(request):
     template = get_template('bookmark/index.html')
     variables = Context({
-        'head_title': 'Horraaaay!!!',
-        'page_title': 'Welcome Django-bookmark',
-        'page_body': 'Save your bookmarks',
+        'user': request.user
     })
     output = template.render(variables)
 

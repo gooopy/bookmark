@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>BOOKMARK | {% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <div id="nav">
+        {% if user.is_authenticated %}
+        {{ user.username }} 님 <a href="/logout">로그아웃</a>
+        {% else %}
+        <a href="/login">로그인</a>
+        {% endif %}
+    </div>
+    <h1>{% block head %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

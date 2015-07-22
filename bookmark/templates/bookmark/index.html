@@ -1,10 +1,11 @@
-<html>
-<head>
-    <title>{{  head_title }}</title>
-</head>
-<body>
-    <h1>{{ page_title }}</h1>
-    <p>{{ page_body }}</p>
+{% extends "bookmark/base.html" %}
+{% block title %}WELCOME{% endblock %}
+{% block head %}당신의 책갈피{% endblock %}
+{% block content %}
+    {% if user.username %}
+        <p>{{ user.username }} 님, 안녕하세요</p>
+    {% else %}
+        <p><a href="/login/">로그인하세요</a></p>
+    {% endif %}
 
-</body>
-</html>
+{% endblock %}
