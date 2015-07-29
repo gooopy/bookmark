@@ -1,21 +1,16 @@
-<html>
-<head>
-    <title>django bookmark - {{ username }}</title>
-</head>
-<body>
-
-<h1>BOOKMARKS of {{ username }} </h1>
-{% if bookmarks %}
+{% extends "bookmark/base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block content %}
+    {% if bookmarks %}
     <ul>
         {% for bookmark in bookmarks %}
             <li>{{ bookmark.title }}</li>
         {% endfor %}
     </ul>
 
-{% else %}
-    <p>Nothing.</p>
-{% endif %}
+    {% else %}
+        <p>Nothing.</p>
+    {% endif %}
+{% endblock %}
 
-</body>
 
-</html>

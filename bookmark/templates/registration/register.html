@@ -1,0 +1,18 @@
+{% extends "bookmark/base.html" %}
+{% block title %}LOGIN{% endblock %}
+{% block content %}
+    <div id="register_container" style="width:300px; position: fixed; left: 50%; margin-left: -150px">
+    <form method="post" action=".">{% csrf_token %}
+
+        {{ form.as_p }}
+
+        <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Sign up</button>
+        </div>
+
+
+    </form>
+    </div>
+{% endblock %}
+
+

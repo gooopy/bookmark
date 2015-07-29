@@ -1,20 +1,25 @@
-<html>
-<head>
-    <title>bookmark LOGIN</title>
-
-</head>
-<body>
-    <h1>USER login</h1>
+{% extends "bookmark/base.html" %}
+{% block title %}LOGIN{% endblock %}
+{% block content %}
     {% if form.errors %}
         <p>Try again.</p>
     {% endif %}
+    <div id="login_container" style="width:300px; position: fixed; left: 50%; margin-left: -150px">
     <form method="post" action=".">{% csrf_token %}
-        <p><label for="id_username">name:</label>{{ form.username }}</p>
-        <p><label for="id_password">password:</label>{{ form.password }}</p>
-        <input type="hidden" name="next" value="/" />
-        <input type="submit" value="login" />
+
+            <div class="form-group">
+                <input type="text" class="form-control input-lg" placeholder="ID" name="username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control input-lg" placeholder="Password" name="password">
+            </div>
+            <input type="hidden" name="next" value="/" />
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+            </div>
 
     </form>
-</body>
+    </div>
+{% endblock %}
 
-</html>
+

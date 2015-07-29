@@ -1,9 +1,110 @@
 
-#nav {
-    float: right;
-    background-color: aqua;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
+body, div, nav, aside, article, h1, h2, h3, h4, ol, ul, li, dl, dt, dd, p, span, form, th, td, input, textarea, select, pre, address {
+    color: #666;
+    font-family: "맑은 고딕",돋움,tahoma;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+dl, ol, ul, li {
+    list-style: outside none none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+nav {
+    background-color: #70e0e5;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul.links {
+    float: right;
+    margin: 30px;
+
+}
+
+nav h1 {
+    position: fixed;
+    float: left;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 7px;
+    font-size: 20px;
+
+}
+nav ul.links li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: white;
+}
+
+nav ul.links li a {
+    color: white;
+}
+
+#head {
     text-align: center;
+    position: relative;
+    top: 100px;
+    height: 60px;
+}
+
+#head h1 {
+    font-size: 20px;
+}
+
+#content {
+    text-align: center;
+    position: relative;
+    top:50px;
+    margin-top:10px;
+}
+
+p input {
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+p input.text {
+    background-color: transparent;
+    border: 1px solid;
+    color: #5e5655;
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    outline: medium none;
+    width: 100%;
+}
+
+p.submit {
+   background-color: lightgoldenrodyellow;
+    width: 100%;
+}
+
+p.submit.text {
+
+}
+
+
+
+#login_container {
+    width:300px;
+    position:fixed;
+    left:50%;
+    margin-left: -150px;
 }
