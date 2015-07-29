@@ -1,1 +1,1 @@
-web: gunicorn {{ django_bookmark }}.wsgi --log-file -
+web: gunicorn django_bookmark.wsgi --log-file -
